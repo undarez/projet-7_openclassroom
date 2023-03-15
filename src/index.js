@@ -1,8 +1,12 @@
+// import react
+// react dom pour modifier le dom dans index.html grace à getelementbyId de root
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './scss/utils/index.scss';
+import './scss/utils/Banner.scss';
+import './scss/utils/_footer.scss';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -10,8 +14,3 @@ root.render(
     <App />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

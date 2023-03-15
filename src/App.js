@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './styles/App.css';
+// import { Fragment } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import './scss/App.scss';
+import { Home, Logements, Error404, About } from './page';
+import Navbar from './components/header/Navbar'
+// import Body from './index'
+import Error from './page/Error404'
+import Footer from './page/footer'
+// import Body from './components/Body/Body'
 
+
+
+
+// function app = routage 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      {/* <Body /> */}
+      
+      {/* affiche le router */}
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/logements/:id" element={<Logements />} />
+        <Route path="*" element={<Error/>} />
+        <Route path="/a-propos" element={<About />}/>
+      </Routes>
+      <Footer/>
+    </BrowserRouter>
+
   );
 }
 
 export default App;
+
+// path = chemain a charger l'orsque l'itinéraire est atteint
+// render = restitue le contenue de la route sur la page html
+// render={() => <h1></h1>

@@ -1,0 +1,25 @@
+header {
+    display: flex;
+    height: 68px;
+    justify-content: space-between;
+    align-items: center;
+    .Kasa-logo img {
+        width: 210px;
+        height: 68px;
+    }
+    .container-nav {
+        width: 309px;
+        display: flex;
+        height: auto;
+        .typo{
+            font: {
+                size: 24px;
+                weight: 500;
+                family: 'Montserrat';
+            }
+            color:#FF6060;
+            width: 200px;
+            align-items: center;
+        }
+    }  
+}

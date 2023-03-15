@@ -1,0 +1,52 @@
+@import '../../scss/utils/typographie';
+
+.desc-card {
+    
+    // position: relative;
+    // border-radius: 10px;
+    // height: 340px;
+    // display: flex;
+    // justify-content: center;
+    cursor: pointer;
+
+    .position {
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        
+        .overlay-banniere {
+            position: absolute;
+            width: 340px;
+            height: 340px;
+            background: rgb(0, 0, 0);
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.2805497198879552) 0%, rgba(0, 0, 0, 0.2637429971988795) 100%);
+            border-radius: 10px;
+        }
+
+        .img-cover {
+            width: 340px;
+            height: 340px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+    }
+
+    .text-banniere {
+        position: absolute;
+        align-items: flex-end;
+        justify-content: flex-end;
+        color: #ffffff;
+        padding: 20px;
+        z-index: 1;
+        width: 300px;
+        height: 1px;
+        color: $color-text_white;
+
+        font: {
+            family: $text;
+            size: 18px;
+            weight: 500;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@import '../utils/typographie';
+
+body{
+display: flex;
+flex-direction: column;
+.color-h1{
+    color: $color-text;
+    font-size: 288px;
+    font-weight: 700;
+    font-family: $text;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-p{
+    color:$color-text;
+    font-size: 36px;
+    font-weight: 500;
+    font-family: $text;
+}
+
+.color-link{
+    color: $color-text;
+    font-size: 18px;
+    font-weight: 500;
+}
+}
