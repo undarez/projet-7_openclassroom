@@ -21,22 +21,31 @@ const Carousel = (props) => {
             }
       };
       return (
-            // container= dim total
-
             <div className="slider">
-                  {/* bouton droite */}
-                  <p className="chiffre">
-                        {currentIndex + 1}/{props.src.length}
-                  </p>
-                  <div className="position-chevron">
-                        {/* bouton gauche */}
-                        <button onClick={slideleft} className="btn-arrowG">
-                              <ChevronG />
-                        </button>
-                        <button onClick={slideright} className="btn-arrowD">
-                              <ChevronD />
-                        </button>
-                  </div>
+                  {/*short circuit permet graéce à la condition d'éffacer les chevron ainsi que les chiffre des images si il ya q'une seule image  */}
+                  {props.src.length > 1 && (
+                        <>
+                              {/* bouton droite */}
+                              <p className="chiffre">
+                                    {currentIndex + 1}/{props.src.length}
+                              </p>
+                              <div className="position-chevron">
+                                    {/* bouton gauche */}
+                                    <button
+                                          onClick={slideleft}
+                                          className="btn-arrowG"
+                                    >
+                                          <ChevronG />
+                                    </button>
+                                    <button
+                                          onClick={slideright}
+                                          className="btn-arrowD"
+                                    >
+                                          <ChevronD />
+                                    </button>
+                              </div>
+                        </>
+                  )}
                   <img
                         className="img-slider"
                         src={props.src[currentIndex]}

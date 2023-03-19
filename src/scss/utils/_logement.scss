@@ -1,4 +1,32 @@
+@import'../utils/typographie';
+
 .container{
     margin:10px auto ;
     padding: 20px 0;
+    width: 1240px;
+    height: auto;
+    .container-text-display{
+        width: 100%;
+        height: auto;
+        .color-p{
+            
+            font: {
+                size: 36px;
+                weight: 500;
+                
+            }
+        }
+        .position-desc{
+            font: {
+                size: 18px;
+                weight: 500;
+                family: $text;
+            }
+            color: $color-text;
+            width: 176px;
+            height: 26px;
+        }
+        
+
+    }
 }

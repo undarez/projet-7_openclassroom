@@ -8,12 +8,22 @@ const Logements = () => {
       const { id } = useParams();
       const oneLogement = Data.filter((logement) => logement.id === id)[0];
       return (
+            // contenue de la page logement.
             <div className="container">
                   <Carousel
                         src={oneLogement.pictures}
                         alt={oneLogement.title}
                   />
+                  <div className='container-text-display'>
+                        <p className='color-p'>
+                        {oneLogement.title}
+                        </p>             
+                        <span className='position-desc'>
+                        {oneLogement.location}
+                        </span>
+                  </div>
             </div>
       );
 };
+
 export default Logements;
