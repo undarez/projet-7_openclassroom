@@ -1,6 +1,5 @@
 @import '../utils/typographie';
 
-
 .containerCollapse {
   width: 1023px;
   height: auto;
@@ -14,19 +13,17 @@
     color: $color-text_white;
     display: flex;
     margin-bottom: 20px;
-    
+
     p {
       padding: 20px;
       font-family: $text;
       color: $color-text;
       font-size: 24px;
       font-weight: 400;
-      
     }
-    
-    .bgCollapse[open]{
+
+    .bgCollapse[open] {
       transition: all 3s ease-in-out;
-      
     }
 
     summary {
@@ -41,73 +38,12 @@
       padding: 10px;
       border-radius: 5px;
       background: $color-text;
-      
-      
-      
+
       svg {
         fill: $color-text_white;
         width: 20px;
         transition: transform 0.5s ease-in-out;
-        
       }
-
-      
-
- 
     }
-
-
-
   }
-
 }
-
-// write one carousel jsx ?
-
-
-
-  // .container-default {
-  //   width: 1023px;
-  //   height: 47px;
-  //   border-radius: 5px;
-  //   background: $color-text;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-
-
-
-  // .text-banniere {
-  //   width: 97px;
-  //   height: 34px;
-  //   font-size: 24px;
-  //   font-weight: 500;
-  //   font-family: $text;
-  //   color: $color-text_white;
-
-
-  // }
-
-  // // quand le collapse est ouvert
-  // .Collapsible__ContentInner {
-  //   width: 1023px;
-  //   height: 146px;
-  //   border-radius: 5px;
-  //   overflow: hidden;
-  //   transition: max-height 0.3s ease-in-out;
-  //   background: $color-container-bg;
-
-
-  //   .color-p {
-  //     font-size: 24px;
-  //     font-weight: 500;
-  //     font-family: $text;
-  //   }
-  // }
-  // .collapse:not(.is-open){
-  //   background-color: transparent;
-  // }
-  // }
-  // .Collapsible__ContentInner--active{
-  //   max-height: 500px;
-  // 

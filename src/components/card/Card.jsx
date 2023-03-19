@@ -3,14 +3,12 @@ import '../../scss/utils/_Card.scss';
 import { Link } from 'react-router-dom';
 const Card = ({ id, title, location, cover }) => {
       return (
-            
-            <Link to={`/logements/${id}`} className="desc-card">
+            <Link to={`/logements/${id}`}>
                   <div className="position">
-                    <div className='overlay-banniere'></div>
-                        <img className="img-cover" src={cover} 
-                        alt="location" />
-                        <article className='text-banniere'>
-                              <h1>{title}</h1>
+                        <div className="overlay-banniere"></div>
+                        <img className="img-cover" src={cover} alt="location" />
+                        <article className="container-article">
+                              <p className="position-desc">{title}</p>
                         </article>
                   </div>
             </Link>
