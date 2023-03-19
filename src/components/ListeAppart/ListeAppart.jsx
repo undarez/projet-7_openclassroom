@@ -5,13 +5,13 @@ import Card from '../card/Card';
 import data from '../../data/logements.json';
 // liste appart = container gris de la maquette
 import '../../scss/utils/_ListeAppart.scss';
-import '../../scss/utils/index.scss'
+
 
 const ListeAppart = () => {
       console.log(data);
       return (
             // item reprend les eléments du fichier logement.json
-            <body className='liste-position'>
+            <div className='liste-position'>
                   <div className="bg-gris">
                         {data.map((item) => (
                               <Card
@@ -23,7 +23,7 @@ const ListeAppart = () => {
                               />
                         ))}
                   </div>
-            </body>
+            </div>
       );
 };
 export default ListeAppart;

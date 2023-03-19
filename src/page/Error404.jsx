@@ -5,12 +5,12 @@ import '../scss/utils/_Error.scss'
 
 const Error = () => {
   return (
-    <body>
+    <div>
       <h1 className='color-h1'>404</h1>
       <p className='color-p'>Oups! La page que vous demandez n'existe pas.</p>
       {/* lien qui ramène l'utilisateur sur la page Home (acceuil) */}
       <Link className='color-link' to="/">Retourner sur la page d'acceuil</Link>
-    </body>
+    </div>
   )
 }
 

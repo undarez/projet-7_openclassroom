@@ -8,7 +8,6 @@ const home = () => {
   return (
     <div>
       <ImageBanner src={bakgroundbanniere} alt="logo de banniere" />
-      {/* <ContainerCard/> */}
       <ListeAppart/>
       </div>
   )

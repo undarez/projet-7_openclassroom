@@ -1,56 +1,30 @@
-// import React, { useState } from 'react';
-// import Collapsible from 'react-collapsible';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import {
-//       faChevronUp,
-//       faChevronDown,
-// } from '@fortawesome/fontawesome-free-solid';
+import { useState } from 'react';
+import '../../scss/utils/Collapse.scss';
+import { ReactComponent as Chevron } from '../../asset/chevronDown.svg';
 
-// import '../../scss/utils/Collapse.scss';
+// donner un nom au tableau contenue-collapse
 
-// const Collapse = () => {
-//       // declaration du usestate pour permettre l'ouverture et la fermeture du collapse.
-//       // usetate = false donc fermé
-//       const [open, setOpen] = useState(false);
+const Collapse = ({ title, content }) => {
+      const [isOpen, setIsOpen] = useState(false);
+      //     appel de la variable detail qui permet de nous creer un collapse
+      return (
+            <div className="containerCollapse">
+                  <details className="bgCollapse">
+                        <summary onClick={() => setIsOpen(!isOpen)}>
+                              {title}
+                              <Chevron
+                                    style={{
+                                          transform: !isOpen
+                                                ? 'rotateX(180deg)'
+                                                : 'rotateX(0)',
+                                    }}
+                              />
+                        </summary>
+                        <p>{content}</p>
+                  </details>
+            </div>
+      );
+};
+export default Collapse;
 
-//       //si pas ouvert alors tu retourne le code suivant
-//       const toggleCollapse = () => {
-//             setOpen(!open);
-//       };
-//       return (
-//             <div className="collapse">
-//                   {/* utilisation de ternaire ? condition si vrai : si faux */}
-//                   <button
-//                         type="button"
-//                         className="btn-collapse"
-//                         onClick={toggleCollapse}
-//                   >
-//                         {!open ? (
-//                               //chevron ouvert up
-//                               <FontAwesomeIcon icon={faChevronDown} />
-//                         ) : (
-//                               //chevron fermé down
-//                               <FontAwesomeIcon icon={faChevronUp} />
-//                         )}
-//                   </button>
-//                   {open && (
-//                         <div className="text-banniere" trigger="Fiabilité">
-//                               <div className="Collapsible__ContentInner">
-//                                     <p className="color-p">
-//                                           La bienveillance fait partie des
-//                                           valeurs fondatrices de Kasa. Tout
-//                                           comportement discriminatoire ou de
-//                                           perturbation du voisinage entraînera
-//                                           une exclusion de notre plateforme
-//                                     </p>
-//                               </div>
-//                         </div>
-//                   )}
-//             </div>
-//       );
-// };
-
-// export default Collapse;
-
-// // export default collapse
-// // write a dropdown in js?
+// export default collapse

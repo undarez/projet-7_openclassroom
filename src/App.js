@@ -1,7 +1,7 @@
 // import { Fragment } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import './scss/App.scss';
-import { Home, Logements, Error404, About } from './page';
+import { Home, Logements, About } from './page';
 import Navbar from './components/header/Navbar'
 // import Body from './index'
 import Error from './page/Error404'

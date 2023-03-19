@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import logo from '../../asset/logo-Kasa.png';
-import '../../scss/utils/index.scss';
 function Navbar() {
       return (
                   <header>
