@@ -1,0 +1,12 @@
+@import '../utils/typographie';
+
+.position-desc{
+    width: 115px;
+    height: 25px;
+    border-radius: 10px;
+    background: $color-text;
+
+    .position-desc{
+        color:$color-text_white;
+    }
+}

@@ -3,6 +3,8 @@ import Carousel from '../components/carousel/carousel';
 import Data from '../data/logements.json';
 import '../scss/utils/_logement.scss';
 import { useParams } from 'react-router-dom';
+import Tags from '../components/tags/Tags';
+
 
 const Logements = () => {
       const { id } = useParams();
@@ -19,6 +21,10 @@ const Logements = () => {
                         <div>
                         <h2 className="color-h">{oneLogement.title}</h2>
                               <span className="position-desc">{oneLogement.location}</span>
+                              {oneLogement.tags.map((item)=>(
+                                    <Tags key={item.id} id={item.id} tags={item} />
+                              ))}
+
                         </div>
                         <div className="container-seller">
                               <p className="color-p">{oneLogement.host.name}</p>
