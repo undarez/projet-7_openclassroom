@@ -1,32 +1,70 @@
 @import'../utils/typographie';
 
-.container{
-    margin:10px auto ;
+.container-flex {
+    margin: 10px auto;
     padding: 20px 0;
     width: 1240px;
-    height: auto;
-    .container-text-display{
+
+    .container-text-display {
         width: 100%;
         height: auto;
-        .color-p{
-            
+        display: flex;
+        height: auto;
+        justify-content: space-between;
+        flex-direction: row;
+
+        .color-h {
             font: {
                 size: 36px;
                 weight: 500;
-                
             }
-        }
-        .position-desc{
-            font: {
-                size: 18px;
-                weight: 500;
-                family: $text;
-            }
-            color: $color-text;
-            width: 176px;
-            height: 26px;
-        }
-        
 
+            color: $color-text;
+        }
+
+        .container-seller {
+            display: flex;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+
+            .color-p {
+                text-align: flex-end;
+
+                font: {
+                    size: 18px;
+                    weight: 500;
+                    family: $text;
+                }
+
+                color: $color-text;
+                width: 93px;
+                height: 52px;
+            }
+
+            .img-seller {
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+
+        }
+
+
+
+    }
+
+    .position-desc {
+        font: {
+            size: 18px;
+            weight: 500;
+            family: $text;
+        }
+
+        color: $color-text;
+        width: 176px;
+        height: 26px;
     }
 }

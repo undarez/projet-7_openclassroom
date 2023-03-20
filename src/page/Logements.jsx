@@ -9,18 +9,25 @@ const Logements = () => {
       const oneLogement = Data.filter((logement) => logement.id === id)[0];
       return (
             // contenue de la page logement.
-            <div className="container">
+            <div className="container-flex">
                   <Carousel
                         src={oneLogement.pictures}
                         alt={oneLogement.title}
                   />
-                  <div className='container-text-display'>
-                        <p className='color-p'>
-                        {oneLogement.title}
-                        </p>             
-                        <span className='position-desc'>
-                        {oneLogement.location}
-                        </span>
+                  <div className="container-text-display">
+                        {/* cette div sert juste de container pour positionner location en dessous de title. */}
+                        <div>
+                        <h2 className="color-h">{oneLogement.title}</h2>
+                              <span className="position-desc">{oneLogement.location}</span>
+                        </div>
+                        <div className="container-seller">
+                              <p className="color-p">{oneLogement.host.name}</p>
+                              <img
+                                    className="img-seller"
+                                    src={oneLogement.host.picture}
+                                    alt={oneLogement.host.name}
+                              />
+                        </div>
                   </div>
             </div>
       );
