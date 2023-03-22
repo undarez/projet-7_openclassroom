@@ -9,7 +9,7 @@ const Collapse = ({ title, content }) => {
       //     appel de la variable detail qui permet de nous creer un collapse
       return (
             <div className="containerCollapse">
-                  <details className="bgCollapse">
+                  <details>
                         <summary onClick={() => setIsOpen(!isOpen)}>
                               {title}
                               <Chevron
@@ -20,7 +20,19 @@ const Collapse = ({ title, content }) => {
                                     }}
                               />
                         </summary>
-                        <p>{content}</p>
+                        {/* si mon content n'est pas un tableau alors */}
+                        {!Array.isArray(content) ? (
+                              <p>{content}</p>
+                        ) : (
+                              <ul>
+                                    {
+                                          // si mon content est un tableau alors on affiche en liste ul et donc map
+                                          content.map((item, index) => (
+                                                <li key={index}>{item}</li>
+                                          ))
+                                    }
+                              </ul>
+                        )}
                   </details>
             </div>
       );

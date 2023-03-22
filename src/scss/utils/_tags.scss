@@ -1,12 +1,22 @@
 @import '../utils/typographie';
 
-.position-desc{
+
+
+.container-Tags {
+    display: flex;
     width: 115px;
     height: 25px;
     border-radius: 10px;
     background: $color-text;
+    justify-content: center;
+    align-items: center;
 
-    .position-desc{
-        color:$color-text_white;
+    font: {
+        family: $text;
+        weight: 500;
+        size: 14px;
     }
+
+    color: $color-text_white;
+
 }

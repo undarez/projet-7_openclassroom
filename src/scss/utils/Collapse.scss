@@ -6,9 +6,9 @@
   margin: 0 auto;
   border-radius: 5px;
 
-  .bgCollapse {
+  details {
     width: 100%;
-    height: auto;
+    height: max-content;
     background: $color-container-bg;
     color: $color-text_white;
     display: flex;
@@ -18,7 +18,7 @@
       padding: 20px;
       font-family: $text;
       color: $color-text;
-      font-size: 24px;
+      font-size: 18px;
       font-weight: 400;
     }
 
@@ -39,10 +39,23 @@
       border-radius: 5px;
       background: $color-text;
 
+      
       svg {
         fill: $color-text_white;
         width: 20px;
         transition: transform 0.5s ease-in-out;
+      }
+    }
+    ul{
+      padding: 20px;
+      list-style-type: none;
+      li{
+        font: {
+          weight:400;
+          family:$text;
+          size: 18px;
+        }
+        color: $color-text;
       }
     }
   }

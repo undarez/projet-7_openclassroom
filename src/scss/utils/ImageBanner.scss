@@ -1,44 +1,40 @@
-main {
+.container-bg {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 40px 0;
 
-    .container-bg {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 40px 0 40px 0;
-
-        .overlay-banniere {
-            position: absolute;
-            width: 1240px;
-            height: 223px;
-            background: rgb(0, 0, 0);
-            background: rgb(0, 0, 0);
-            background: linear-gradient(56deg, rgba(0, 0, 0, 0.39539565826330536) 0%, rgba(0, 0, 0, 0.1516981792717087) 100%);
-            border-radius: 25px;
-        }
-
-        .bg-Banniere {
-            height: 223px;
-            width: 1240px;
-            border-radius: 25px;
-            object-fit: cover;
-
-        }
-
-        .text-banniere {
-            position: absolute;
-            align-items: center;
-            justify-content: center;
-            color: #ffffff;
-            z-index: 1;
-
-            font : {
-                size: 48px;
-                weight: 500;
-                family: 'Montserrat';
-                font-style: normal;
-            }
-        }
+    .overlay-banniere {
+        position: absolute;
+        width: 1240px;
+        height: 223px;
+        background: rgb(0, 0, 0);
+        background: rgb(0, 0, 0);
+        background: linear-gradient(56deg, rgba(0, 0, 0, 0.39539565826330536) 0%, rgba(0, 0, 0, 0.1516981792717087) 100%);
+        border-radius: 25px;
     }
 
+    .bg-Banniere {
+        height: 223px;
+        width: 1240px;
+        border-radius: 25px;
+        object-fit: cover;
+
+    }
+
+    .text-banniere {
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        z-index: 1;
+
+        font : {
+            size: 48px;
+            weight: 500;
+            family: 'Montserrat';
+            font-style: normal;
+        }
+    }
 }
