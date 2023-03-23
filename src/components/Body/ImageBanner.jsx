@@ -4,7 +4,6 @@ import '../../scss/utils/ImageBanner.scss';
 
 const ImageBanner = (props) => {
       return (
-            
             <div className="container-bg">
                   <section className="container-bg">
                         <div className="overlay-banniere"></div>

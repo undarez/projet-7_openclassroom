@@ -8,7 +8,7 @@ const Card = ({ id, title, location, cover }) => {
                         <div className="overlay-banniere"></div>
                         <img className="img-cover" src={cover} alt="location" />
                         <article className="container-article">
-                              <p className="position-desc">{title}</p>
+                              <p className="position-title">{title}</p>
                         </article>
                   </div>
             </Link>
