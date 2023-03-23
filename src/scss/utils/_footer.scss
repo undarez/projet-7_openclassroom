@@ -7,11 +7,12 @@ body{
     .bg-footer {
         width: 1260px;
         height: 209px;
+        margin-top: 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background: $color-footer;
         align-items: center;
+        background: $color-footer;
         .kasa-logo{
             width: 122px;
             height: 39px;
@@ -22,6 +23,7 @@ body{
             font: {
                 size: 24px;
                 weight: 500px;
+                family: $text;
             }
             color:$color-text_white;
         }
